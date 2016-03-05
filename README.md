@@ -1,4 +1,4 @@
-# ArraySegments [![AppVeyor](https://img.shields.io/appveyor/ci/StephenCleary/ArraySegments.svg?style=plastic)](https://ci.appveyor.com/project/StephenCleary/ArraySegments) [![Coveralls](https://img.shields.io/coveralls/StephenCleary/ArraySegments.svg?style=plastic)](https://coveralls.io/r/StephenCleary/ArraySegments) [![Gratipay](https://img.shields.io/gratipay/StephenCleary.svg?style=plastic)](https://gratipay.com/StephenCleary)
+# ArraySegments [![AppVeyor](https://img.shields.io/appveyor/ci/StephenCleary/ArraySegments.svg?style=plastic)](https://ci.appveyor.com/project/StephenCleary/ArraySegments) [![Coveralls](https://img.shields.io/coveralls/StephenCleary/ArraySegments.svg?style=plastic)](https://coveralls.io/r/StephenCleary/ArraySegments)
 
 A library for slicing and dicing arrays (without copying).
 
