@@ -2,5 +2,8 @@
 
 A library for slicing and dicing arrays (without copying).
 
+[API Docs (core)](http://dotnetapis.com/pkg/Nito.ArraySegments)
+[API Docs (streams)](http://dotnetapis.com/pkg/Nito.ArraySegments.Streams)
+
 [![NuGet Pre Release](https://img.shields.io/nuget/vpre/Nito.ArraySegments.svg?style=plastic)](https://www.nuget.org/packages/Nito.ArraySegments/)
 [![NuGet Pre Release](https://img.shields.io/nuget/vpre/Nito.ArraySegments.Streams.svg?style=plastic)](https://www.nuget.org/packages/Nito.ArraySegments.Streams/)
