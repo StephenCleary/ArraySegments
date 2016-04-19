@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22609.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FB549AE4-1A45-4149-9686-FE410966E2FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A3AE9882-18EB-4047-B8B6-BFD8B75AD260}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nito.ArraySegments", "src\Nito.ArraySegments\Nito.ArraySegments.kproj", "{53091856-0A9F-4D58-8A94-18A269BC412D}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nito.ArraySegments", "src\Nito.ArraySegments\Nito.ArraySegments.xproj", "{53091856-0A9F-4D58-8A94-18A269BC412D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1BB2293-5031-4430-A36C-39AF398EFAD7}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,9 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nito.ArraySegments.Streams", "src\Nito.ArraySegments.Streams\Nito.ArraySegments.Streams.kproj", "{AEF14571-1C3E-405C-A4FA-2DB59D595A5C}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nito.ArraySegments.Streams", "src\Nito.ArraySegments.Streams\Nito.ArraySegments.Streams.xproj", "{AEF14571-1C3E-405C-A4FA-2DB59D595A5C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnitTests", "test\UnitTests\UnitTests.kproj", "{7644BD72-2AC8-4A2A-BD63-1F117FDAD85C}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UnitTests", "test\UnitTests\UnitTests.xproj", "{7644BD72-2AC8-4A2A-BD63-1F117FDAD85C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

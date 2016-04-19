@@ -1,17 +1,17 @@
 ﻿{
-    "version": "2.0.0-alpha-1",
-    "dependencies": {
-    },
+  "version": "2.0.0-beta-1",
+  "dependencies": {
+    "System.Runtime": "4.0.21-beta-23516"
+  },
 
-    "frameworks" : {
-        "net45" : { 
-            "dependencies": {
-            }
-        },
-        "aspnetcore50" : { 
-            "dependencies": {
-                "System.Runtime": "4.0.20-beta-22523"
-            }
-        }
+  "frameworks": {
+    "net45": {
+      "dependencies": {
+      }
+    },
+    "netcore50": {
+      "dependencies": {
+      }
     }
+  }
 }

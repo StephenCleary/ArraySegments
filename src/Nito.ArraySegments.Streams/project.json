@@ -1,19 +1,19 @@
 ﻿{
-    "version": "2.0.0-alpha-1",
-    "dependencies": {
-        "Nito.ArraySegments": "1.0.0-alpha-*",
-        "System.Runtime": "4.0.20-beta-22523",
-        "System.IO": "4.0.10.0-beta-22605"
-    },
+  "version": "2.0.0-beta-1",
+  "dependencies": {
+    "Nito.ArraySegments": "2.0.0-beta-*",
+    "System.IO": "4.0.11-beta-23516",
+    "System.Runtime": "4.0.21-beta-23516"
+  },
 
-    "frameworks": {
-        "net45": {
-            "dependencies": {
-            }
-        },
-        "aspnetcore50": {
-            "dependencies": {
-            }
-        }
+  "frameworks": {
+    "net45": {
+      "dependencies": {
+      }
+    },
+    "netcore50": {
+      "dependencies": {
+      }
     }
+  }
 }
