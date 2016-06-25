@@ -10,7 +10,7 @@ install:
 
     $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetcli"
 
-    & .\install-dotnet.ps1 -Channel "preview" -Version "1.0.0-beta-002071" -InstallDir "$env:DOTNET_INSTALL_DIR"
+    & .\dotnet-install.ps1 -Channel "preview" -Version "1.0.0-beta-002071" -InstallDir "$env:DOTNET_INSTALL_DIR"
 
 before_build:
 - ps: dotnet restore
