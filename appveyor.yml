@@ -1,18 +1,19 @@
 version: '{build}'
-os: Visual Studio 2015 CTP 6
+os: Visual Studio 2015
 configuration: Debug
 environment:
   COVERALLS_REPO_TOKEN:
     secure: s7GZarSt3Q0wrGUd9sspQEEg6xwze/QBzTkRMgBo8IIlSvTDpgbMbfnAcC0ZVjeb
 install:
 - ps: >-
-    iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))
+    Invoke-WebRequest "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0-preview1/scripts/obtain/dotnet-install.ps1" -OutFile ".\dotnet-install.ps1"
 
-    $env:Path = "C:\Program Files (x86)\MSBuild\14.0\Bin;" + [Environment]::GetEnvironmentVariables("Machine")["Path"] + ";" + [Environment]::GetEnvironmentVariables("User")["Path"]
+    $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetcli"
 
-    dnvm install 1.0.0-rc1-update2
+    & .\install-dotnet.ps1 -Channel "preview" -Version "1.0.0-beta-002071" -InstallDir "$env:DOTNET_INSTALL_DIR"
+
 before_build:
-- ps: dnu restore
+- ps: dotnet restore
 build:
   verbosity: minimal
 test_script:

@@ -1,9 +1,7 @@
 ﻿{
-  "version": "2.0.0-beta-1",
+  "version": "2.0.0-beta-2",
   "dependencies": {
-    "Nito.ArraySegments": "2.0.0-beta-*",
-    "System.IO": "4.0.11-beta-23516",
-    "System.Runtime": "4.0.21-beta-23516"
+    "Nito.ArraySegments": "2.0.0-beta-*"
   },
 
   "frameworks": {
@@ -11,8 +9,10 @@
       "dependencies": {
       }
     },
-    "netcore50": {
+    "netstandard1.0": {
       "dependencies": {
+        "System.IO": "4.1.0",
+        "System.Runtime": "4.1.0"
       }
     }
   }

@@ -1,7 +1,6 @@
 ﻿{
-  "version": "2.0.0-beta-1",
+  "version": "2.0.0-beta-2",
   "dependencies": {
-    "System.Runtime": "4.0.21-beta-23516"
   },
 
   "frameworks": {
@@ -9,8 +8,9 @@
       "dependencies": {
       }
     },
-    "netcore50": {
+    "netstandard1.0": {
       "dependencies": {
+        "System.Runtime": "4.1.0"
       }
     }
   }
