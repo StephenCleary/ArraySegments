@@ -18,7 +18,6 @@ install:
 
 before_build:
 - ps: dotnet restore
-build:
-  verbosity: minimal
+build: off
 test_script:
 - ps: ./Coverage.ps1
