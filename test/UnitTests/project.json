@@ -2,7 +2,7 @@
   "version": "1.0.0-*",
   "testRunner": "xunit",
   "dependencies": {
-    "Nito.ArraySegments": "*",
+    "Nito.ArraySegments": "2.0.0-beta-*",
     "xunit": "2.1.0",
     "dotnet-test-xunit": "1.0.0-rc2-build10025",
     "ReportGenerator": "2.4.4",
