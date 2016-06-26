@@ -1,13 +1,12 @@
 ﻿{
   "version": "2.0.0-beta-2",
-  "dependencies": {
+  "authors": [ "Stephen Cleary" ],
+  "description": "Utility methods for array segments.",
+  "buildOptions": {
+    "warningsAsErrors": true
   },
-
   "frameworks": {
-    "net45": {
-      "dependencies": {
-      }
-    },
+    "net45": { },
     "netstandard1.0": {
       "dependencies": {
         "System.Runtime": "4.1.0"
