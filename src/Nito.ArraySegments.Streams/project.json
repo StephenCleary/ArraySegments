@@ -1,5 +1,5 @@
 ﻿{
-  "version": "2.0.0-delta-2",
+  "version": "2.0.0-delta-3",
   "authors": [ "Stephen Cleary" ],
   "description": "Utility methods for array segments as streams.",
   "dependencies": {
@@ -11,6 +11,12 @@
       "dependencies": {
         "System.IO": "4.1.0",
         "System.Runtime": "4.1.0"
+      }
+    },
+    ".NETPortable,Version=v4.5,Profile=Profile259": {
+      "frameworkAssemblies": {
+        "System.IO": "",
+        "System.Runtime": ""
       }
     }
   }
