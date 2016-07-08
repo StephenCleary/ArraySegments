@@ -42,6 +42,7 @@ namespace Nito.ArraySegments
         /// <summary>
         /// Sets the position of this reader. Returns the new position.
         /// </summary>
+        /// <param name="this">The array segment.</param>
         /// <param name="offset">The offset from the origin.</param>
         /// <param name="origin">The origin to use when setting the position.</param>
         /// <returns>The new position.</returns>
