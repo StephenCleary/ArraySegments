@@ -1,9 +1,10 @@
 ﻿{
-  "version": "2.0.0-delta-3",
+  "version": "2.0.0-delta-4",
   "authors": [ "Stephen Cleary" ],
   "description": "Utility methods for array segments.",
   "buildOptions": {
-    "warningsAsErrors": true
+    "warningsAsErrors": true,
+    "xmlDoc": true
   },
   "frameworks": {
     "netstandard1.0": {

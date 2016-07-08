@@ -1,7 +1,12 @@
 ﻿{
-  "version": "2.0.0-delta-3",
+  "version": "2.0.0-delta-4",
   "authors": [ "Stephen Cleary" ],
   "description": "Utility methods for array segments as streams.",
+  "buildOptions": {
+    "warningsAsErrors": true,
+    "xmlDoc": true
+  },
+
   "dependencies": {
     "Nito.ArraySegments": "2.0.0-delta-*"
   },
