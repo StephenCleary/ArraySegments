@@ -1,10 +1,19 @@
 ﻿{
-  "version": "2.0.0-delta-4",
+  "version": "2.0.0-delta-6",
   "authors": [ "Stephen Cleary" ],
   "description": "Utility methods for array segments as streams.",
   "buildOptions": {
     "warningsAsErrors": true,
     "xmlDoc": true
+  },
+  "packOptions": {
+    "tags": [ "arraysegment" ],
+    "projectUrl": "https://github.com/StephenCleary/ArraySegments",
+    "licenseUrl": "https://raw.githubusercontent.com/StephenCleary/ArraySegments/master/LICENSE",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/StephenCleary/ArraySegments.git"
+    }
   },
 
   "dependencies": {
@@ -20,8 +29,8 @@
     },
     ".NETPortable,Version=v4.5,Profile=Profile259": {
       "frameworkAssemblies": {
-        "System.IO": "",
-        "System.Runtime": ""
+        "System.IO": { "type": "build" },
+        "System.Runtime": { "type": "build" }
       }
     }
   }
