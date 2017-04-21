@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Nito.ArraySegments
 {
@@ -43,6 +44,30 @@ namespace Nito.ArraySegments
             var ret = _source.Slice(Position, count);
             Position += count;
             return ret;
+        }
+
+        /// <summary>
+        /// Sets the position of this reader. Returns the new position.
+        /// </summary>
+        /// <param name="offset">The offset from the origin.</param>
+        /// <param name="origin">The origin to use when setting the position.</param>
+        /// <returns>The new position.</returns>
+        public int Seek(int offset, SeekOrigin origin)
+        {
+            switch (origin)
+            {
+                case SeekOrigin.Begin:
+                    Position = offset;
+                    break;
+                case SeekOrigin.Current:
+                    Position += offset;
+                    break;
+                case SeekOrigin.End:
+                    Position = Source.Count + offset;
+                    break;
+            }
+
+            return Position;
         }
     }
 }

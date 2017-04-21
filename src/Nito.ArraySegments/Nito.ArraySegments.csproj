@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Utility methods for array segments.</Description>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <VersionSuffix>pre-01</VersionSuffix>
+    <Authors>Stephen Cleary</Authors>
+    <TargetFrameworks>netstandard1.0</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Nito.ArraySegments</AssemblyName>
+    <PackageId>Nito.ArraySegments</PackageId>
+    <PackageTags>arraysegment</PackageTags>
+    <PackageProjectUrl>https://github.com/StephenCleary/ArraySegments</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/StephenCleary/ArraySegments/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/StephenCleary/ArraySegments.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.0|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+  </PropertyGroup>
+
+</Project>

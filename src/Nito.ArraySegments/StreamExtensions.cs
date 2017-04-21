@@ -39,29 +39,5 @@ namespace Nito.ArraySegments
             return new BinaryWriter(segment.CreateStream(true));
         }
 
-        /// <summary>
-        /// Sets the position of this reader. Returns the new position.
-        /// </summary>
-        /// <param name="this">The array segment.</param>
-        /// <param name="offset">The offset from the origin.</param>
-        /// <param name="origin">The origin to use when setting the position.</param>
-        /// <returns>The new position.</returns>
-        public static int Seek<T>(this ArraySegmentReader<T> @this, int offset, SeekOrigin origin)
-        {
-            switch (origin)
-            {
-                case SeekOrigin.Begin:
-                    @this.Position = offset;
-                    break;
-                case SeekOrigin.Current:
-                    @this.Position += offset;
-                    break;
-                case SeekOrigin.End:
-                    @this.Position = @this.Source.Count + offset;
-                    break;
-            }
-
-            return @this.Position;
-        }
     }
 }
