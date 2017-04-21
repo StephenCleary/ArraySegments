@@ -15,10 +15,7 @@ namespace Nito.ArraySegments
         /// <param name="offset">The offset in this array where the segment begins. Must be in the range <c>[0, <paramref name="array"/>.Length]</c>.</param>
         /// <param name="count">The length of the segment. Must be in the range <c>[0, <paramref name="array"/>.Length - <paramref name="offset"/>]</c>.</param>
         /// <returns>A new array segment.</returns>
-        public static ArraySegment<T> AsArraySegment<T>(this T[] array, int offset, int count)
-        {
-            return new ArraySegment<T>(array, offset, count);
-        }
+        public static ArraySegment<T> AsArraySegment<T>(this T[] array, int offset, int count) => new ArraySegment<T>(array, offset, count);
 
         /// <summary>
         /// Creates an array segment referencing this array.
@@ -27,10 +24,7 @@ namespace Nito.ArraySegments
         /// <param name="array">The array.</param>
         /// <param name="offset">The offset in this array where the segment begins. Defaults to <c>0</c> (the beginning of the array). Must be in the range <c>[0, <paramref name="array"/>.Length]</c>.</param>
         /// <returns>A new array segment.</returns>
-        public static ArraySegment<T> AsArraySegment<T>(this T[] array, int offset = 0)
-        {
-            return new ArraySegment<T>(array, offset, array.Length - offset);
-        }
+        public static ArraySegment<T> AsArraySegment<T>(this T[] array, int offset = 0) => new ArraySegment<T>(array, offset, array.Length - offset);
 
         /// <summary>
         /// Creates an <see cref="ArraySegmentReader{T}"/> over this array segment.
@@ -38,10 +32,7 @@ namespace Nito.ArraySegments
         /// <typeparam name="T">The type of elements contained in the array.</typeparam>
         /// <param name="segment">The array segment.</param>
         /// <returns>A new <see cref="ArraySegmentReader{T}"/>.</returns>
-        public static ArraySegmentReader<T> CreateArraySegmentReader<T>(this ArraySegment<T> segment)
-        {
-            return new ArraySegmentReader<T>(segment);
-        }
+        public static ArraySegmentReader<T> CreateArraySegmentReader<T>(this ArraySegment<T> segment) => new ArraySegmentReader<T>(segment);
 
         /// <summary>
         /// Creates a new array segment by taking a number of elements from the beginning of this array segment.
@@ -50,10 +41,7 @@ namespace Nito.ArraySegments
         /// <param name="segment">The array segment.</param>
         /// <param name="count">The number of elements in the new array segment. This must be in the range <c>[0, <paramref name="segment"/>.Count]</c>.</param>
         /// <returns>The new array segment.</returns>
-        public static ArraySegment<T> Take<T>(this ArraySegment<T> segment, int count)
-        {
-            return new ArraySegment<T>(segment.Array, segment.Offset, count);
-        }
+        public static ArraySegment<T> Take<T>(this ArraySegment<T> segment, int count) => new ArraySegment<T>(segment.Array, segment.Offset, count);
 
         /// <summary>
         /// Creates a new array segment by skipping a number of elements from the beginning of this array segment.
@@ -62,10 +50,8 @@ namespace Nito.ArraySegments
         /// <param name="segment">The array segment.</param>
         /// <param name="count">The number of elements to skip. This must be in the range <c>[0, <paramref name="segment"/>.Count]</c>.</param>
         /// <returns>The new array segment.</returns>
-        public static ArraySegment<T> Skip<T>(this ArraySegment<T> segment, int count)
-        {
-            return new ArraySegment<T>(segment.Array, segment.Offset + count, segment.Count - count);
-        }
+        public static ArraySegment<T> Skip<T>(this ArraySegment<T> segment, int count) =>
+            new ArraySegment<T>(segment.Array, segment.Offset + count, segment.Count - count);
 
         /// <summary>
         /// Creates a new array segment by skipping a number of elements and then taking a number of elements from this array segment.
@@ -75,10 +61,8 @@ namespace Nito.ArraySegments
         /// <param name="skipCount">The number of elements to skip. This must be in the range <c>[0, <paramref name="segment"/>.Count]</c>.</param>
         /// <param name="takeCount">The number of elements in the new array segment. This must be in the range <c>[0, <paramref name="segment"/>.Count - <paramref name="skipCount"/>]</c>.</param>
         /// <returns>The new array segment.</returns>
-        public static ArraySegment<T> Slice<T>(this ArraySegment<T> segment, int skipCount, int takeCount)
-        {
-            return new ArraySegment<T>(segment.Array, segment.Offset + skipCount, takeCount);
-        }
+        public static ArraySegment<T> Slice<T>(this ArraySegment<T> segment, int skipCount, int takeCount) =>
+            new ArraySegment<T>(segment.Array, segment.Offset + skipCount, takeCount);
 
         /// <summary>
         /// Creates a new array segment by taking a number of elements from the end of this array segment.
@@ -87,10 +71,7 @@ namespace Nito.ArraySegments
         /// <param name="segment">The array segment.</param>
         /// <param name="count">The number of elements in the new array segment. This must be in the range <c>[0, <paramref name="segment"/>.Count]</c>.</param>
         /// <returns>The new array segment.</returns>
-        public static ArraySegment<T> TakeLast<T>(this ArraySegment<T> segment, int count)
-        {
-            return segment.Skip(segment.Count - count);
-        }
+        public static ArraySegment<T> TakeLast<T>(this ArraySegment<T> segment, int count) => segment.Skip(segment.Count - count);
 
         /// <summary>
         /// Creates a new array segment by skipping a number of elements from the end of this array segment.
@@ -99,10 +80,7 @@ namespace Nito.ArraySegments
         /// <param name="segment">The array segment.</param>
         /// <param name="count">The number of elements to skip. This must be in the range <c>[0, <paramref name="segment"/>.Count]</c>.</param>
         /// <returns>The new array segment.</returns>
-        public static ArraySegment<T> SkipLast<T>(this ArraySegment<T> segment, int count)
-        {
-            return segment.Take(segment.Count - count);
-        }
+        public static ArraySegment<T> SkipLast<T>(this ArraySegment<T> segment, int count) => segment.Take(segment.Count - count);
 
         /// <summary>
         /// Copies the elements in this array segment into a destination array segment. The copy operation will not overflow the bounds of the segments; it will copy <c>min(segment.Count, destination.Count)</c> elements.

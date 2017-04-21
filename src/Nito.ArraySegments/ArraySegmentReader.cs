@@ -10,24 +10,19 @@ namespace Nito.ArraySegments
     public sealed class ArraySegmentReader<T>
     {
         /// <summary>
-        /// The source array segment.
-        /// </summary>
-        private readonly ArraySegment<T> _source;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="ArraySegmentReader&lt;T&gt;"/> class.
         /// </summary>
         /// <param name="source">The source array segment.</param>
         public ArraySegmentReader(ArraySegment<T> source)
         {
-            _source = source;
+            Source = source;
             Position = 0;
         }
 
         /// <summary>
         /// Gets the source array segment.
         /// </summary>
-        public ArraySegment<T> Source { get { return _source; } }
+        public ArraySegment<T> Source { get; }
 
         /// <summary>
         /// Gets or sets the position of this reader.
@@ -41,7 +36,7 @@ namespace Nito.ArraySegments
         /// <returns>The new array segment.</returns>
         public ArraySegment<T> Read(int count)
         {
-            var ret = _source.Slice(Position, count);
+            var ret = Source.Slice(Position, count);
             Position += count;
             return ret;
         }
